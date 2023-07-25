@@ -10,7 +10,6 @@ const routes: Routes = [
   {path:'main',component:MainPageComponent},
   {path:'chat',component:ChatPageComponent},
   {path:'profile',component:ProfilePageComponent},
-  // {path:'', redirectTo:'MainPageComponent',pathMatch:'prefix'},
   {path:'**',component:NotFoundComponent}
 ];
 

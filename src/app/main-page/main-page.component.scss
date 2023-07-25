@@ -1,30 +1,42 @@
 
+.header{
+  margin-top: 10px;
+  display: flex;
+  align-items:center ;
+  justify-content: space-between;
+}
+.hello{
+  font-weight:lighter;
+  color:grey;
+  margin-top: 0 !important;
+  margin-bottom: 3px;
+}
+.hello-class h1{
+  margin: 0 !important;
+  font-weight: bold;
+}
 .main-content{
 margin: 10px;
 }
 
-.dp-container {
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 50%; /* To make it circular, assuming the image is square */
-    overflow: hidden; /* To hide any content outside the circle (if the image is not square) */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow effect */
-    transition: transform 0.3s; 
-    position:absolute;
-     top: 20px;
-     right: 20px; 
+.dp-container {  cursor: pointer;
+    border-radius: 50%; 
+    overflow: hidden; 
+    margin-bottom: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .dp-container img {
-    width: 100px; /* Adjust the size of the image as needed */
+    width: 100px;
     height: 100px;
+    border-radius: 50%;
   }
 
-  /* profile-images.component.css */
-/* profile-images.component.css */
 .container {
   display: flex;
-  // justify-content: center;
+  
   overflow-x: auto;
   margin-top: 100px;
 }
@@ -33,6 +45,29 @@ margin: 10px;
   display: flex;
   gap: 20px;
   padding: 10px;
+}
+
+.circle-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: #fff; 
+  font-size: 48px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.circle-plus:hover {
+  background-color: #0056b3; 
+  cursor: pointer;
+}
+
+.plus-icon {
+  color: grey;
+  width: 100px;
+  text-align: center;
 }
 
 .circle {
@@ -51,7 +86,6 @@ margin: 10px;
   object-fit: cover;
 }
 
-// /* post-list.component.css */
 .post-list{
  margin-top: 20px;;
 }
@@ -106,7 +140,15 @@ margin: 10px;
   color: #888;
 }
 
-/* Pagination styles remain the same as before */
+.colon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 170px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+}
+
 
 
 .pagination {
@@ -131,7 +173,7 @@ margin: 10px;
   cursor: not-allowed;
 }
 
-/* FontAwesome icons for left and right chevron buttons */
 .pagination i {
   font-size: 16px;
 }
+

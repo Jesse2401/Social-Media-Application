@@ -5,12 +5,23 @@
     </div>
   </div>
 
+<div class="colon-container">
+    <a class="colon">:</a>
+</div>
+
   <div class="search-container">
-    <input type="text" class="search-input" placeholder="Search by Profile Name..." >
-    <span class="search-icon"><i class='fas fa-search fa-3x'></i></span>
+    <div class="search-icon">
+     
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <input type="text" class="search-input" placeholder="Search friend" [(ngModel)]="searchText" (input)="filterProfiles($event)">
+   
   </div>
   
   <div class="center-container">
+    <div class="not-found" *ngIf="friendsChat?.length==0" >
+          <h2>No Match Found</h2>
+    </div>
     <div class="profile-box" *ngFor="let list of friendsChat">
       <div class="profile-photo-container">
         <img [src]="list?.ProfileImage" alt="Profile Photo">
@@ -20,6 +31,11 @@
         <p class="profile-message">{{list.LastMessage}}</p>
       </div>
     </div>
+  </div>
+
+  <div class="edit">
+   
+    <i class="fa-solid fa-pencil"></i>
   </div>
   
 

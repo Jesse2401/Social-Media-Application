@@ -2,10 +2,15 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+
 
 @Injectable()
 export class SharedService {
   username: string='Saket Tiwari';
+  public loaderSubject = new Subject<any>();
+
+  
   baseUrl: string = 'https://cors-anywhere.herokuapp.com/https://app.smartkeeda.com/'
   
   constructor(private http:HttpClient){

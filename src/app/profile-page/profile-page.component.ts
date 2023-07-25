@@ -25,6 +25,7 @@ export class ProfilePageComponent implements OnInit {
 
   getUserProfile(){
 
+    this.sharedService.loaderSubject.next(true);
     this.sharedService.getProfile().subscribe((response:any)=>{
 
       console.log(response);
@@ -37,6 +38,7 @@ export class ProfilePageComponent implements OnInit {
          this.userName=response.Name;
          this.photosCount=response.PhotosCount;
     }
+    this.sharedService.loaderSubject.next(false);
     })
     
   }

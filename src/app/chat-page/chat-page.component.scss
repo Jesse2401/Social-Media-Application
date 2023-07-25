@@ -1,107 +1,92 @@
 .left-arrow-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 20px;
-    left: 20px;
+    margin-left: 20px;
   }
   
   .left-arrow,
   .my-profile {
-    font-size: 24px;
+    font-size: 30px;
     text-decoration: none;
     color: #000; 
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .left-arrow {
     margin-bottom: 10px;
   }
 
-// .search-container {
-//   display: flex;
-//   align-items: center;
-//   max-width: 300px;
-//   margin: 0 auto; 
-//   padding: 10px;
-//   border: 1px solid #ccc;
-//   border-radius: 20px;
-// }
-
-// .search-input {
-//   flex: 1; 
-//   padding: 8px;
-//   border: none;
-//   outline: none;
-// }
-
-// .search-button {
-//   padding: 8px 20px;
-//   background-color: #007bff;
-//   color: #fff; 
-//   border: none;
-//   border-radius: 20px;
-//   cursor: pointer;
-// }
-
-// .search-button:hover {
-//   background-color: #0056b3; 
-// }
+  .colon-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .colon {
+    font-size: 24px;
+    text-decoration: none;
+    color: #000; 
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 100;
+  }
 
 .search-container {
   display: flex;
   align-items: center;
-  max-width: 300px; /* Adjust the width of the search bar */
-  margin: 0 auto; /* Center the search bar horizontally */
+  margin: 0 auto; 
+  margin-top: 40px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   margin-bottom: 20px;
+  width: 295px;
+  flex:1;
+  box-shadow: -1px 1px 10px gray;
 }
 
-/* Styles for the search-input */
 .search-input {
-  flex: 1; /* Allow the input to grow and fill the available space */
+  flex: 1;
   padding: 8px;
   border: none;
   outline: none;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: large;
+  padding-left: 20px;
 }
 
-/* Styles for the search-icon */
 .search-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: #007bff; /* Adjust the search icon background color based on your design */
-  color: #fff; /* Adjust the search icon color based on your design */
-  margin-left: 10px;
-  cursor: pointer;
+
+  margin-right: 10px; 
 }
 
-/* Styles for the search-input */
-.search-input {
-  width: 200px; /* Adjust the width of the search input as needed */
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
+
+
+.fa-magnifying-glass{
+  background-color: deeppink;
+  padding: 10px;
+  color: white;
+  border-radius: 50%;
 }
 
-/* Styles for the box */
-/* Styles for the center-container */
+
+
+
 .center-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   flex-direction: column;
 }
 
 .profile-box {
   display: flex;
-  align-items: center;
   padding: 20px;
   width: 250px;
   height: 30px;
@@ -135,4 +120,29 @@
 .profile-message {
   margin: 5px 0 0;
   font-size: 12px;
+}
+
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: deeppink;
+  margin-left: 300px;
+  position: fixed;
+  bottom: 10px;
+}
+
+.edit-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.fa-pencil{
+  color: white !important;
 }

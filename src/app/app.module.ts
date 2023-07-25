@@ -10,6 +10,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedService } from './services/shared-service.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './intercepter/token-interceptor';
+import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { TokenInterceptor } from './intercepter/token-interceptor';
     MainPageComponent,
     ProfilePageComponent,
     ChatPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [SharedService,
   {

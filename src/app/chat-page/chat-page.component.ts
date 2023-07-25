@@ -10,13 +10,11 @@ import { FormControl } from '@angular/forms';
 export class ChatPageComponent implements OnInit {
 
   friendsChat:any;
-  // searchControl: FormControl = new FormControl('');
-  filteredFriendsChat:any;
+  filteredFriendsChat :any;
+  searchText: string = ''; 
 
   constructor(public sharedservice:SharedService){
-    // this.searchControl.valueChanges.subscribe((searchTerm) => {
-    //   this.applyFilter(searchTerm);
-    // });
+    
     this.filteredFriendsChat = this.friendsChat;
 
   }
@@ -29,23 +27,32 @@ export class ChatPageComponent implements OnInit {
 
   getFriendsConversation()
   {
+    this.sharedservice.loaderSubject.next(true);
     this.sharedservice.getConversation().subscribe((response:any)=>{
       console.log(response);
 
       if(response&&response.Status)
       {
           this.friendsChat=response.FriendList;
+          this.filteredFriendsChat=this.friendsChat;
 
       }
+      this.sharedservice.loaderSubject.next(false);
 
     })
   }
 
-  onSearch(searchValue: string): void {
-    // Filter the profile boxes based on the search input
-    // this.filteredFriendsChat = this.friendsChat.filter((item: this.friendsChat) =>
-    //   item.Name.toLowerCase().includes(searchValue.toLowerCase())
-    // );
+  filterProfiles(searchText: any): void {
+    this.searchText = searchText.target.value; 
+
+    if (!searchText) {
+      this.friendsChat = [...this.filteredFriendsChat];
+      return;
+    }
+
+    this.friendsChat = this.filteredFriendsChat.filter((profile:any) =>
+      profile.Name.toLowerCase().includes(this.searchText.toLowerCase())
+    );
   }
 }
 
