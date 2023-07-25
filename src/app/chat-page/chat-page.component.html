@@ -1,0 +1,25 @@
+<div class="left-arrow-container">
+    <a class="left-arrow" [routerLink]="['/profile']">&#8592;</a>
+    <div class="my-profile-container">
+      <a class="my-profile">Conversation</a>
+    </div>
+  </div>
+
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search by Profile Name..." >
+    <span class="search-icon"><i class='fas fa-search fa-3x'></i></span>
+  </div>
+  
+  <div class="center-container">
+    <div class="profile-box" *ngFor="let list of friendsChat">
+      <div class="profile-photo-container">
+        <img [src]="list?.ProfileImage" alt="Profile Photo">
+      </div>
+      <div class="profile-info">
+        <h2 class="profile-name">{{list.Name}}</h2>
+        <p class="profile-message">{{list.LastMessage}}</p>
+      </div>
+    </div>
+  </div>
+  
+

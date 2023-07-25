@@ -1,0 +1,52 @@
+<div>
+
+<div class="left-arrow-container">
+<a class="left-arrow" [routerLink]="['/main']">&#8592;</a>
+<div class="my-profile-container">
+  <a class="my-profile">My Profile</a>
+</div>
+</div>
+
+<div class="colon-container">
+    <a class="colon" routerLink="/chat">:</a>
+</div>
+
+
+<div class="center-container">
+  <div class="dp-container" >
+    <img src="./assets/images/profile-photo.jpg" alt="User Profile Picture">
+  </div>
+  <div class="profile-name">
+    <h2>{{userName}}</h2>
+  </div>
+  <div class="profile-description">
+    <h2>{{userDescription}}</h2>
+  </div>
+  <div class="profile-stats">
+    <div class="stats-item">
+      <h3>Photos</h3>
+      <p>{{photosCount}}</p>
+    </div>
+    <div class="stats-item">
+      <h3>Followers</h3>
+      <p>{{followerCount}}</p>
+    </div>
+    <div class="stats-item">
+      <h3>Follows</h3>
+      <p>{{followingCount}}</p>
+    </div>
+  </div>
+  <div class="image-container"  >
+    <div class="image-item" *ngFor="let list of photosList">
+      <img [src]="list?.Image" alt="Image 1">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>

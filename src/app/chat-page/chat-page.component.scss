@@ -1,0 +1,138 @@
+.left-arrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .left-arrow,
+  .my-profile {
+    font-size: 24px;
+    text-decoration: none;
+    color: #000; 
+  }
+  
+  .left-arrow {
+    margin-bottom: 10px;
+  }
+
+// .search-container {
+//   display: flex;
+//   align-items: center;
+//   max-width: 300px;
+//   margin: 0 auto; 
+//   padding: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 20px;
+// }
+
+// .search-input {
+//   flex: 1; 
+//   padding: 8px;
+//   border: none;
+//   outline: none;
+// }
+
+// .search-button {
+//   padding: 8px 20px;
+//   background-color: #007bff;
+//   color: #fff; 
+//   border: none;
+//   border-radius: 20px;
+//   cursor: pointer;
+// }
+
+// .search-button:hover {
+//   background-color: #0056b3; 
+// }
+
+.search-container {
+  display: flex;
+  align-items: center;
+  max-width: 300px; /* Adjust the width of the search bar */
+  margin: 0 auto; /* Center the search bar horizontally */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* Styles for the search-input */
+.search-input {
+  flex: 1; /* Allow the input to grow and fill the available space */
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+/* Styles for the search-icon */
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #007bff; /* Adjust the search icon background color based on your design */
+  color: #fff; /* Adjust the search icon color based on your design */
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Styles for the search-input */
+.search-input {
+  width: 200px; /* Adjust the width of the search input as needed */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+/* Styles for the box */
+/* Styles for the center-container */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.profile-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 250px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.profile-photo-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profile-photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.profile-message {
+  margin: 5px 0 0;
+  font-size: 12px;
+}

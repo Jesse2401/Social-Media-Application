@@ -1,0 +1,59 @@
+<div class="main-content">
+    <h2>Hello</h2>
+    <!-- <h1>{{sharedService.username}}</h1> -->
+    <h1>{{userName}}</h1>
+
+    <!-- home.component.html -->
+     <!-- <h1>Home Component</h1> -->
+     <div class="dp-container" [routerLink]="['/profile']">
+        <img src="./assets/images/profile-photo.jpg" alt="User Profile Picture">
+     </div>
+     
+     <!-- profile-images.component.html -->
+    <div class="container">
+       <div class="image-container">
+        <div *ngFor="let list of friendList" class="circle">
+        <img [src]="list?.ProfileImage" alt="Profile Image">
+      </div>
+    </div>
+  </div>
+
+    
+   <!-- post-list.component.html -->
+<div class="post-list">
+    <div *ngFor="let list of postList">
+      <div class="Container">
+        <div class="top-part">
+          <img class="square-image" [src]="list?.PostImage" alt="Square Image">
+        </div>
+        <div class="bottom-part">
+          <img class="profile-photo" [src]="list?.ProfileImage" alt="Profile Photo">
+          <div class="profile-info">
+            <div class="profile-name">{{list.Name}}</div>
+            <div class="profile-time">{{list.Time}}</div>
+          </div>
+        </div>
+      </div>
+   </div>
+    <!-- Pagination controls -->
+    <!-- ... Same as before ... -->
+  
+  
+    <!-- Pagination controls
+    <div class="pagination">
+      <button [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      <span>Page {{ currentPage }}</span> -->
+      <!-- <button [disabled]="currentPage * pageSize >= totalPosts" (click)="onPageChange(currentPage + 1)">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </div> -->
+  </div>
+  
+  
+
+  
+</div>
+
+
